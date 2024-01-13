@@ -1,0 +1,6 @@
+https://github.com/heroku/heroku-buildpack-registry
+https://github.com/heroku/heroku-buildpack-nginx
+https://github.com/heroku/heroku-buildpack-apt
+https://github.com/heroku/heroku-buildpack-sonar
+https://github.com/heroku/heroku-buildpack-env
+https://github.com/heroku/heroku-buildpack-registry
