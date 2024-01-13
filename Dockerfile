@@ -1,8 +1,9 @@
-# Use an updated base image
-FROM ubuntu:20.04
+# Use the official Heroku stack image
+FROM heroku/heroku:22
 
 # Your maintainer and labels here...
 
+# Set environment variables if needed
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Update the package list and install necessary packages
@@ -14,6 +15,8 @@ COPY entry.sh /
 COPY squid.conf /etc/squid/squid.conf
 RUN chmod a+x /entry.sh
 
-EXPOSE 3128/tcp
+# Expose the port that Squid will listen on
+EXPOSE 3128
 
-ENTRYPOINT ["/entry.sh"]
+# Define the command to run your application
+CMD ["/entry.sh"]
